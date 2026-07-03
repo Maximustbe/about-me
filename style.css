@@ -878,3 +878,374 @@ a:hover{
     color:black;
 
 }
+/* ===========================================
+   GREEN FLAGS
+=========================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.box{
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    backdrop-filter:blur(8px);
+
+    cursor:pointer;
+
+}
+
+.box:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 0 35px rgba(212,175,55,.25);
+
+}
+
+.box{
+
+    font-size:52px;
+
+}
+
+.box h3{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+/* ===========================================
+   TIMELINE
+=========================================== */
+
+.timeline{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:60px auto;
+
+    padding-left:50px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:14px;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:linear-gradient(#d4af37,#ffd54f);
+
+}
+
+.event{
+
+    position:relative;
+
+    margin-bottom:45px;
+
+    padding:25px 30px;
+
+    border-radius:18px;
+
+    background:#121212;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.35s;
+
+}
+
+.event:hover{
+
+    transform:translateX(10px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 0 35px rgba(212,175,55,.20);
+
+}
+
+.event::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    background:#ffd54f;
+
+    border-radius:50%;
+
+    left:-45px;
+
+    top:35px;
+
+    box-shadow:0 0 20px #ffd54f;
+
+}
+
+.event h3{
+
+    color:#ffd54f;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+    font-family:'Bebas Neue';
+
+    letter-spacing:1px;
+
+}
+
+.event p{
+
+    color:#bdbdbd;
+
+    line-height:30px;
+
+}
+
+/* ===========================================
+   STORY
+=========================================== */
+
+#story{
+
+    background:linear-gradient(180deg,#111,#090909);
+
+}
+
+#story p{
+
+    max-width:900px;
+
+    font-size:19px;
+
+    line-height:36px;
+
+}
+
+/* ===========================================
+   PROJECTS
+=========================================== */
+
+#projects .grid{
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+}
+
+#projects .box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:180px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+#projects .box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(135deg,
+    rgba(212,175,55,.15),
+    transparent);
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+#projects .box:hover::before{
+
+    opacity:1;
+
+}
+
+#projects .box:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================================
+   CONTACTS
+=========================================== */
+
+#contacts{
+
+    text-align:center;
+
+}
+
+#contacts .buttons{
+
+    justify-content:center;
+
+}
+
+#contacts .btn{
+
+    min-width:220px;
+
+    font-size:20px;
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+footer{
+
+    padding:50px;
+
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+/* ===========================================
+   FADE ANIMATION
+=========================================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================================
+   GLOW
+=========================================== */
+
+.glow{
+
+    animation:glow 3s infinite alternate;
+
+}
+
+@keyframes glow{
+
+0%{
+
+box-shadow:0 0 25px rgba(212,175,55,.15);
+
+}
+
+100%{
+
+box-shadow:
+
+0 0 60px rgba(212,175,55,.45),
+
+0 0 120px rgba(212,175,55,.15);
+
+}
+
+}
+
+/* ===========================================
+   HOVER LINKS
+=========================================== */
+
+a{
+
+    transition:.3s;
+
+}
+
+a:hover{
+
+    opacity:.95;
+
+}
+
+/* ===========================================
+   TEXT SELECTION
+=========================================== */
+
+::selection{
+
+    background:#d4af37;
+
+    color:black;
+
+}
